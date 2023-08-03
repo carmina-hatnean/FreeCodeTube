@@ -72,6 +72,8 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        // prin "$this->layout = 'auth';" am schimbat layout-ul, nu mai este main, acum  este auth
+        $this->layout = 'auth';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
